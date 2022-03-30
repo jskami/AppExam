@@ -1,4 +1,4 @@
 
-public interface MyNumber {  //¶÷´Ù½ÄÀ» ÇØº¸ÀÚ / ±³Àç 463p
-	int getMax(int x, int y); // Ãß»ó¸Ş¼­µåÀÌ´Ù.(±¸ÇöÇÏÁö ¾ÊÀ½, ¼±¾ğ¸¸ ÇØ¾ß ÇÔ)
+public interface MyNumber {  //ëŒë‹¤ì‹ì„ í•´ë³´ì / êµì¬ 463p
+	int getMax(int x, int y); // ì¶”ìƒë©”ì„œë“œì´ë‹¤.(êµ¬í˜„í•˜ì§€ ì•ŠìŒ, ì„ ì–¸ë§Œ í•´ì•¼ í•¨)
 }

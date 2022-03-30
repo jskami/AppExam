@@ -1,19 +1,17 @@
-
-public class TestMyNumber { // ¶÷´Ù½Ä / ±³Àç 463p
+public class TestMyNumber { // ëžŒë‹¤ì‹ / êµìž¬ 463p
 
 	public static void main(String[] args) {
 		MyNumber max = (x, y) -> (x >= y) ? x : y; 
-		// ()¾È¿¡ ÀÎ¼ö(argument)¸¦ ³Ö¾îÁÖ°í ->ÀÌ·¸°Ô Ä¡È¯ÇÏ°Ú´Ù!-ÀÇ ÀÇ¹Ì¸¦ ½áÁØ´Ù.
-		// ÀÎÅÍÆäÀÌ½ºÀÇ ¸Þ¼­µå¸¦ ±¸ÇöÇÑ °ÍÀÌ´Ù.
+		// ()ì•ˆì— ì¸ìˆ˜(argument)ë¥¼ ë„£ì–´ì£¼ê³  ->ì´ë ‡ê²Œ ì¹˜í™˜í•˜ê² ë‹¤!-ì˜ ì˜ë¯¸ë¥¼ ì¨ì¤€ë‹¤.
+		// ì¸í„°íŽ˜ì´ìŠ¤ì˜ ë©”ì„œë“œë¥¼ êµ¬í˜„í•œ ê²ƒì´ë‹¤.
 		System.out.println(max.getMax(100, 200));
 	
 	
-	// StringConcatÀÎÅÍÆäÀÌ½º¿¡ ´ëÇÑ Å×½ºÆ®class·Î »õ·Î ¸¸µéÁö ¸»°í ±×³É ¿©±â¼­ ¾²ÀÚ	
-		String s1 = "ÀÚ¹Ù";
-		String s2 = "ÇÁ·Î±×·¡¹Ö";
+	// StringConcatì¸í„°íŽ˜ì´ìŠ¤ì— ëŒ€í•œ í…ŒìŠ¤íŠ¸classë¡œ ìƒˆë¡œ ë§Œë“¤ì§€ ë§ê³  ê·¸ëƒ¥ ì—¬ê¸°ì„œ ì“°ìž	
+		String s1 = "ìžë°”";
+		String s2 = "í”„ë¡œê·¸ëž˜ë°";
 		StringConcat concat = (x, y) -> System.out.println(x+y);
 		concat.makeString(s1, s2);
 	}
 
 }
-

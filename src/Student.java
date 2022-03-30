@@ -1,4 +1,3 @@
-
 public class Student {
 	private int studentId;
 	String studentName;
@@ -6,11 +5,11 @@ public class Student {
 		this.studentId = studentId;
 		this.studentName = studentName;
 	}
-	public int getStudentId() {  //ÀĞ±â
+	public int getStudentId() {  //ì½ê¸°
 		return studentId;
 	}
-	public void setStudentId(int studentId) {  //ÀúÀå
-		this.studentId = studentId;  //¸â¹öº¯¼ö¿¡ ÀúÀå
+	public void setStudentId(int studentId) {  //ì €ì¥
+		this.studentId = studentId;  //ë©¤ë²„ë³€ìˆ˜ì— ì €ì¥
 	}
 	
 	public String getStudentName() {  
@@ -20,18 +19,18 @@ public class Student {
 		this.studentName = studentName;
 	}
 		
-	// ¿À¹ö¶óÀÌµù ÇÒ·¡!!
+	// ì˜¤ë²„ë¼ì´ë”© í• ë˜!!
 //	@Override
-//	public boolean equals(Object obj) {  //ºñ±³ÇÏ´Â ¸Ş¼­µåÀÎµ¥ ÀÌ°Ç »ç¿ëÇÏÁö ¾ÊÀ»°Ô
-//		Student std = (Student)obj; // Student °´Ã¼·Î ÀúÀåÇØ¾ß ÇÏ±â ¶§¹®¿¡ Ä³½ºÆÃ ÇÊ¿ä
+//	public boolean equals(Object obj) {  //ë¹„êµí•˜ëŠ” ë©”ì„œë“œì¸ë° ì´ê±´ ì‚¬ìš©í•˜ì§€ ì•Šì„ê²Œ
+//		Student std = (Student)obj; // Student ê°ì²´ë¡œ ì €ì¥í•´ì•¼ í•˜ê¸° ë•Œë¬¸ì— ìºìŠ¤íŒ… í•„ìš”
 //		if(this.studentId == std.studentId && studentName.equals(std.studentName)) {	
-//			return true;             // ¹®ÀÚ¿­ ºñ±³ÇÒ ¶§ studentName == std.studentName ¾²Áö ¸» °Í!
+//			return true;             // ë¬¸ìì—´ ë¹„êµí•  ë•Œ studentName == std.studentName ì“°ì§€ ë§ ê²ƒ!
 //		} else {
 //			return false;
 //		}
 //	}
 	
-	//ÇÊ¿ä¿¡ µû¶ó toString¸Ş¼­µå¸¦ ¸¸µé¾î »ç¿ëÇÏ¶ó. ¾ÈÇØµµ »ó°üÀº ¾ø´Ù.
+	//í•„ìš”ì— ë”°ë¼ toStringë©”ì„œë“œë¥¼ ë§Œë“¤ì–´ ì‚¬ìš©í•˜ë¼. ì•ˆí•´ë„ ìƒê´€ì€ ì—†ë‹¤.
 	@Override
 	public String toString() {
 		return studentId + ":" + studentName;

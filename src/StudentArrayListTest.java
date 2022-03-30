@@ -1,31 +1,30 @@
-
 public class StudentArrayListTest {
 
 	public static void main(String[] args) {
-		// ÀÎ¶óÀÎ¹æ½ÄÀ¸·Î, °´Ã¼º¯¼ö´Â ÇÏ³ª¸¸ »ı¼ºÇÏ¸é µÈ´Ù.
+		// ì¸ë¼ì¸ë°©ì‹ìœ¼ë¡œ, ê°ì²´ë³€ìˆ˜ëŠ” í•˜ë‚˜ë§Œ ìƒì„±í•˜ë©´ ëœë‹¤.
 		StudentArrayList stList = new StudentArrayList();
-		//°´Ã¼¸¦ »ı¼ºÇÏÁö ¾ÊÀº ¹®¹ıÀ¸·Îµµ °¡´ÉÇÏ´Ù´Â°É ¾Ë ¼ö ÀÖ´Ù.
-		stList.addStudent(new Student(100, "È«±æµ¿"));
-		stList.addStudent(new Student(200, "°­°¨Âù"));
-		stList.addStudent(new Student(300, "±è»ñ°«"));
-		stList.addStudent(new Student(400, "À»Áö¹®´ö"));
-		stList.addStudent(new Student(500, "ÀÌ¼Ò·æ"));
+		//ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ ì•Šì€ ë¬¸ë²•ìœ¼ë¡œë„ ê°€ëŠ¥í•˜ë‹¤ëŠ”ê±¸ ì•Œ ìˆ˜ ìˆë‹¤.
+		stList.addStudent(new Student(100, "í™ê¸¸ë™"));
+		stList.addStudent(new Student(200, "ê°•ê°ì°¬"));
+		stList.addStudent(new Student(300, "ê¹€ì‚¿ê°“"));
+		stList.addStudent(new Student(400, "ì„ì§€ë¬¸ë•"));
+		stList.addStudent(new Student(500, "ì´ì†Œë£¡"));
 		stList.showAllStudent();
-		//stList.removeStudent(300); ¹®¹ı¿¡·¯ ¾øÀ½, ÀÌ·¸°Ô ÇØµµ °¡´É
+		//stList.removeStudent(300); ë¬¸ë²•ì—ëŸ¬ ì—†ìŒ, ì´ë ‡ê²Œ í•´ë„ ê°€ëŠ¥
 		
 		if (stList.removeStudent(300)) {
-			System.out.println("»èÁ¦¼º°ø");
+			System.out.println("ì‚­ì œì„±ê³µ");
 		} else {
-			System.out.println("»èÁ¦½ÇÆĞ");
+			System.out.println("ì‚­ì œì‹¤íŒ¨");
 		}
 		stList.showAllStudent();
 		
-		//³»°¡ ÇÑ ¹æ½Ä
-//		Student st1 = new Student(1, "Çã¾Æ¶ó");
-//		Student st2 = new Student(2, "ÀÌ½½¾Æ");
-//		Student st3 = new Student(3, "°íÀ¯ºñ");
-//		Student st4 = new Student(4, "¹®ÂùÈ£");
-//		Student st5 = new Student(5, "¹ÚÁ¾¼ö");
+		//ë‚´ê°€ í•œ ë°©ì‹
+//		Student st1 = new Student(1, "í—ˆì•„ë¼");
+//		Student st2 = new Student(2, "ê³ ì€í¬");
+//		Student st3 = new Student(3, "ê³ ìœ ë¹„");
+//		Student st4 = new Student(4, "ë¬¸ì°¬í˜¸");
+//		Student st5 = new Student(5, "ë°•ì¢…ìˆ˜");
 //		stList.addStudent(st1);
 //		stList.addStudent(st2);
 //		stList.addStudent(st3);
@@ -33,25 +32,25 @@ public class StudentArrayListTest {
 //		stList.addStudent(st5);
 //		stList.showAllStudent();
 
-		// ÇĞ»ı Á¤º¸ »èÁ¦ : ID
+		// í•™ìƒ ì •ë³´ ì‚­ì œ : ID
 		/*if (stList.removeStudent(5) == true) {
-			System.out.println("ÇĞ»ı idÁ¤º¸ »èÁ¦ ¼º°ø");
+			System.out.println("í•™ìƒ idì •ë³´ ì‚­ì œ ì„±ê³µ");
 		} else {
-			System.out.println("ÇĞ»ı idÁ¤º¸ »èÁ¦ ½ÇÆĞ");
+			System.out.println("í•™ìƒ idì •ë³´ ì‚­ì œ ì‹¤íŒ¨");
 		}
 		stList.showAllStudent();
 		
-		// ÇĞ»ı Á¤º¸ »èÁ¦ : NAME
-		if (stList.removeStudent("¹®ÂùÈ£") == true) {
-			System.out.println("ÇĞ»ı nameÁ¤º¸ »èÁ¦ ¼º°ø");
+		// í•™ìƒ ì •ë³´ ì‚­ì œ : NAME
+		if (stList.removeStudent("ë¬¸ì°¬í˜¸") == true) {
+			System.out.println("í•™ìƒ nameì •ë³´ ì‚­ì œ ì„±ê³µ");
 		} else {
-			System.out.println("ÇĞ»ı nameÁ¤º¸ »èÁ¦ ½ÇÆĞ");
+			System.out.println("í•™ìƒ nameì •ë³´ ì‚­ì œ ì‹¤íŒ¨");
 		}
 		stList.showAllStudent();
 		
-		System.out.println(st5); //.toString()ÀÌ ¼û°ÜÁø »óÅÂÀÌ´Ù.
+		System.out.println(st5); //.toString()ì´ ìˆ¨ê²¨ì§„ ìƒíƒœì´ë‹¤.
 		System.out.println(st5.toString()); */
-		//À§ÀÇ µÎ Ãâ·Â¹®Àº µ¿ÀÏÇÏ´Ù.
+		//ìœ„ì˜ ë‘ ì¶œë ¥ë¬¸ì€ ë™ì¼í•˜ë‹¤.
 	}
 
 }

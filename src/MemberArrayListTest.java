@@ -1,36 +1,35 @@
-
 public class MemberArrayListTest {
 
-	public static void main(String[] args) {  // ±³Àç 411p / ±×·¯³ª ¿ì¸®´Â ¼±»ı´ÔÀÇ ¹æ½ÄÀ¸·Î ¸¸µé¾îº¸ÀÚ
+	public static void main(String[] args) {  // êµì¬ 411p / ê·¸ëŸ¬ë‚˜ ìš°ë¦¬ëŠ” ì„ ìƒë‹˜ì˜ ë°©ì‹ìœ¼ë¡œ ë§Œë“¤ì–´ë³´ì
 		MemberArrayList memList = new MemberArrayList();
-		Member m1 = new Member(100, "È«±æµ¿"); //memList¿¡ ³ÖÀ» ¸â¹öº¯¼ö¸¦ ¸¸µé¾î¾ß ÇÑ´Ù.
-		Member m2 = new Member(200, "±è»ñ°«"); //memList¿¡ ³ÖÀ» ¸â¹öº¯¼ö¸¦ ¸¸µé¾î¾ß ÇÑ´Ù.
-		Member m3 = new Member(300, "ÀÌµµ·É"); //memList¿¡ ³ÖÀ» ¸â¹öº¯¼ö¸¦ ¸¸µé¾î¾ß ÇÑ´Ù.
-		Member m4 = new Member(400, "ÀÌ¼ø½Å"); //memList¿¡ ³ÖÀ» ¸â¹öº¯¼ö¸¦ ¸¸µé¾î¾ß ÇÑ´Ù.
-		Member m5 = new Member(500, "°­°¨Âù"); //memList¿¡ ³ÖÀ» ¸â¹öº¯¼ö¸¦ ¸¸µé¾î¾ß ÇÑ´Ù. -> »õ·Î¿î È¸¿ø ÀÎ½ºÅÏ½º »ı¼º
+		Member m1 = new Member(100, "í™ê¸¸ë™"); //memListì— ë„£ì„ ë©¤ë²„ë³€ìˆ˜ë¥¼ ë§Œë“¤ì–´ì•¼ í•œë‹¤.
+		Member m2 = new Member(200, "ê¹€ì‚¿ê°“"); //memListì— ë„£ì„ ë©¤ë²„ë³€ìˆ˜ë¥¼ ë§Œë“¤ì–´ì•¼ í•œë‹¤.
+		Member m3 = new Member(300, "ì´ë„ë ¹"); //memListì— ë„£ì„ ë©¤ë²„ë³€ìˆ˜ë¥¼ ë§Œë“¤ì–´ì•¼ í•œë‹¤.
+		Member m4 = new Member(400, "ì´ìˆœì‹ "); //memListì— ë„£ì„ ë©¤ë²„ë³€ìˆ˜ë¥¼ ë§Œë“¤ì–´ì•¼ í•œë‹¤.
+		Member m5 = new Member(500, "ê°•ê°ì°¬"); //memListì— ë„£ì„ ë©¤ë²„ë³€ìˆ˜ë¥¼ ë§Œë“¤ì–´ì•¼ í•œë‹¤. -> ìƒˆë¡œìš´ íšŒì› ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		memList.addMember(m1);
 		memList.addMember(m2);
 		memList.addMember(m3);
 		memList.addMember(m4);
-		memList.addMember(m5); // »õ·Î¿î ÀÎ½ºÅÏ½ºµéÀ» Ãß°¡Çß´Ù.
-		memList.showAllMember(); // ¸ğµç È¸¿øµé Ãâ·Â
+		memList.addMember(m5); // ìƒˆë¡œìš´ ì¸ìŠ¤í„´ìŠ¤ë“¤ì„ ì¶”ê°€í–ˆë‹¤.
+		memList.showAllMember(); // ëª¨ë“  íšŒì›ë“¤ ì¶œë ¥
 		
-		//ÀÌÁ¦ ´©±¸ ÇÑ ¸íÀ» Áö¿öº¸ÀÚ!
-		//memList.removeMember(300); //removeÇÒ ¶§ ¹İÈ¯°ªÀÌ ÀÖ¾î¾ß ÇÑ´Ù. Id°¡ 300°ªÀÎ ¸â¹ö¸¦ »èÁ¦!
+		//ì´ì œ ëˆ„êµ¬ í•œ ëª…ì„ ì§€ì›Œë³´ì!
+		//memList.removeMember(300); //removeí•  ë•Œ ë°˜í™˜ê°’ì´ ìˆì–´ì•¼ í•œë‹¤. Idê°€ 300ê°’ì¸ ë©¤ë²„ë¥¼ ì‚­ì œ!
 		//memList.showAllMember();
 		
-		if (memList.removeMember(300) == true) { //¹İÈ¯°ªÀÌ ÇÊ¿äÇÏ´Ï±î! ÀÌ·¸°Ô ÀÛ¼ºÇØº¸ÀÚ
-			System.out.println("»èÁ¦ ¼º°ø");
+		if (memList.removeMember(300) == true) { //ë°˜í™˜ê°’ì´ í•„ìš”í•˜ë‹ˆê¹Œ! ì´ë ‡ê²Œ ì‘ì„±í•´ë³´ì
+			System.out.println("ì‚­ì œ ì„±ê³µ");
 		} else {
-			System.out.println("»èÁ¦ ½ÇÆĞ");
+			System.out.println("ì‚­ì œ ì‹¤íŒ¨");
 		}
 		memList.showAllMember();
 		
-		// ½º½º·ÎÇØº¸ÀÚ! : id°¡ ¾Æ´Ñ ÀÌ¸§À» ¿À¹ö·Îµù ÇÏ¿© Á¦°ÅÇØº¸ÀÚ!
-		if (memList.removeMember("È«±æµ¿") == true) {
-			System.out.println("»èÁ¦ ¼º°ø");
+		// ìŠ¤ìŠ¤ë¡œí•´ë³´ì! : idê°€ ì•„ë‹Œ ì´ë¦„ì„ ì˜¤ë²„ë¡œë”© í•˜ì—¬ ì œê±°í•´ë³´ì!
+		if (memList.removeMember("í™ê¸¸ë™") == true) {
+			System.out.println("ì‚­ì œ ì„±ê³µ");
 		} else {
-			System.out.println("»èÁ¦ ½ÇÆĞ");
+			System.out.println("ì‚­ì œ ì‹¤íŒ¨");
 		}
 		memList.showAllMember();
 		

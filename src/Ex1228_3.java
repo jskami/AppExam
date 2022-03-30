@@ -2,24 +2,24 @@ import java.io.*;
 public class Ex1228_3 {
 
 	public static void main(String[] args) {
-		// ½ºÆ®¸² Å¬·¡½º È°¿ë(ÆÄÀÏ ÀÐ±â) / ±³Àç 534~5p
+		// ìŠ¤íŠ¸ë¦¼ í´ëž˜ìŠ¤ í™œìš©(íŒŒì¼ ì½ê¸°) / êµìž¬ 534~5p
 		FileInputStream fis = null;
 		try {
-			fis = new FileInputStream("reader.txt"); // AppExamÆú´õ ³» bin(½ÇÇà)Æú´õ¿¡ ¸¸µé¾î ³õÀº »óÅÂ
-			//Ã³¸® ±¸°£, ¹®ÀÚ¿­À» ¹Þ¾Æ³»±â¸¸ ÇÏ¸é µÇ´Âµ¥, ¹®ÀÚ¿­ÀÌ ¾ó¸¶³ª ÀÖ´ÂÁö´Â ¸ð¸£´Â »óÅÂ
-			int i;  // ÀÐÀº ¹ÙÀÌÆ® °ªÀ» ÀúÀåÇÒ º¯¼ö
-			while ((i = fis.read()) != -1) {  // µ¥ÀÌÅÍ¸¦ ÀÐÀ¸¸é °è¼Ó ÁøÇà, ¸ø ÀÐ¾úÀ¸¸é -1¾¿ ¹ÝÈ¯-> ¹Ýº¹¹® Å»Ãâ!
-				 //System.out.println(i);  // ÀÌ·¯¸é i´Â ¹ÙÀÌÆ®Çü½ÄÀ¸·Î Ãâ·ÂµÇ±â ¶§¹®¿¡ ¾ÈµÅ!
-				 System.out.println((char)i);  //¹ÙÀÌÆ®¸¦ ¹®ÀÚ·Î Ãâ·Â! 
+			fis = new FileInputStream("reader.txt"); // AppExamí´ë” ë‚´ bin(ì‹¤í–‰)í´ë”ì— ë§Œë“¤ì–´ ë†“ì€ ìƒíƒœ
+			//ì²˜ë¦¬ êµ¬ê°„, ë¬¸ìžì—´ì„ ë°›ì•„ë‚´ê¸°ë§Œ í•˜ë©´ ë˜ëŠ”ë°, ë¬¸ìžì—´ì´ ì–¼ë§ˆë‚˜ ìžˆëŠ”ì§€ëŠ” ëª¨ë¥´ëŠ” ìƒíƒœ
+			int i;  // ì½ì€ ë°”ì´íŠ¸ ê°’ì„ ì €ìž¥í•  ë³€ìˆ˜
+			while ((i = fis.read()) != -1) {  // ë°ì´í„°ë¥¼ ì½ìœ¼ë©´ ê³„ì† ì§„í–‰, ëª» ì½ì—ˆìœ¼ë©´ -1ì”© ë°˜í™˜-> ë°˜ë³µë¬¸ íƒˆì¶œ!
+				 //System.out.println(i);  // ì´ëŸ¬ë©´ iëŠ” ë°”ì´íŠ¸í˜•ì‹ìœ¼ë¡œ ì¶œë ¥ë˜ê¸° ë•Œë¬¸ì— ì•ˆë¼!
+				 System.out.println((char)i);  //ë°”ì´íŠ¸ë¥¼ ë¬¸ìžë¡œ ì¶œë ¥! 
 			}
-			// ¿©±â±îÁö.. but ½ÇÆÐÇÒ°Å¾ß, ¸Þ¸ðÀå¿¡ ÀÖ´Â '¾È³çÇÏ¼¼¿ä'´Â ¹®ÀÚ¿­ÀÌ±â ¶§¹®ÀÌÁö, ÇÑ±ÛÀº ¿©·¯ ¹ÙÀÌÆ®·Î Á¶ÇÕµÈ ¹®ÀÚ¿­ÀÌ±â ¶§¹®ÀÌ¾ß. ???????·Î Ãâ·ÂµÉ°Å¾ß. ÀÌÁ¦ ¿µ¹®ÀÚ·Î ¹Ù²ãº¸ÀÚ. Ãâ·ÂÀÌ Àß µÉ°Å¾ß------------------
+			// ì—¬ê¸°ê¹Œì§€.. but ì‹¤íŒ¨í• ê±°ì•¼, ë©”ëª¨ìž¥ì— ìžˆëŠ” 'ì•ˆë…•í•˜ì„¸ìš”'ëŠ” ë¬¸ìžì—´ì´ê¸° ë•Œë¬¸ì´ì§€, í•œê¸€ì€ ì—¬ëŸ¬ ë°”ì´íŠ¸ë¡œ ì¡°í•©ëœ ë¬¸ìžì—´ì´ê¸° ë•Œë¬¸ì´ì•¼. ???????ë¡œ ì¶œë ¥ë ê±°ì•¼. ì´ì œ ì˜ë¬¸ìžë¡œ ë°”ê¿”ë³´ìž. ì¶œë ¥ì´ ìž˜ ë ê±°ì•¼------------------
 		
 		} catch (Exception e) {
 			System.out.println("1:" + e);
 		} finally {
-			if (fis != null) {  // reader.txtÆÄÀÏÀÌ Á¸ÀçÇÏ´Ï±î ÆÄÀÏÀ» ¿ÀÇÂÇß´Ù¸é
+			if (fis != null) {  // reader.txtíŒŒì¼ì´ ì¡´ìž¬í•˜ë‹ˆê¹Œ íŒŒì¼ì„ ì˜¤í”ˆí–ˆë‹¤ë©´
 				try {
-					fis.close();  // ´Ý¾Æ¾ßÁö! ´Ý´Â ±¸¹®À» ¸¸µéÀÚ.
+					fis.close();  // ë‹«ì•„ì•¼ì§€! ë‹«ëŠ” êµ¬ë¬¸ì„ ë§Œë“¤ìž.
 				} catch (Exception ex) {
 					System.out.println("2:" + ex);
 				}

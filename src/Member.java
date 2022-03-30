@@ -1,30 +1,29 @@
-
 public class Member {
-	private int memberId; // ¸â¹öº¯¼ö·ÎºÎÅÍ Á¢±Ù ¸øÇÏ°Ô ÇÏÀÚ!
+	private int memberId; // ë©¤ë²„ë³€ìˆ˜ë¡œë¶€í„° ì ‘ê·¼ ëª»í•˜ê²Œ í•˜ì!
 	private String memberName;
 	public Member(int memberId, String memberName) {
 		this.memberId = memberId;
-		this.memberName = memberName;  // »ı¼ºÀÚ ±¸Çö
+		this.memberName = memberName;  // ìƒì„±ì êµ¬í˜„
 	}
-	public int getMemberId() {  // getÀº ÀĞ¾î³»´Â °ÍÀÌ°í, ÀĞ´Â´Ù´Â °ÍÀº ¹İÈ¯ ÇÒ °Ô ÀÖ´Ù´Â ÀÇ¹Ì¶ó´Â°Å ¾ËÁö? Å¸ÀÔ ÀÛ¼ºÈÄ getº¯¼ö ÀÛ¼ºÇØ
+	public int getMemberId() {  // getì€ ì½ì–´ë‚´ëŠ” ê²ƒì´ê³ , ì½ëŠ”ë‹¤ëŠ” ê²ƒì€ ë°˜í™˜ í•  ê²Œ ìˆë‹¤ëŠ” ì˜ë¯¸ë¼ëŠ”ê±° ì•Œì§€? íƒ€ì… ì‘ì„±í›„ getë³€ìˆ˜ ì‘ì„±í•´
 		return memberId;		
 	}
 	public void setMemberId(int memberId) {
 		this.memberId = memberId;
 	}
 	
-	public String getMemberName() {  // getÀº ÀĞ¾î³»´Â °ÍÀÌ°í, ÀĞ´Â´Ù´Â °ÍÀº ¹İÈ¯ ÇÒ °Ô ÀÖ´Ù´Â ÀÇ¹Ì¶ó´Â°Å ¾ËÁö? Å¸ÀÔ ÀÛ¼ºÈÄ getº¯¼ö ÀÛ¼ºÇØ
+	public String getMemberName() {  // getì€ ì½ì–´ë‚´ëŠ” ê²ƒì´ê³ , ì½ëŠ”ë‹¤ëŠ” ê²ƒì€ ë°˜í™˜ í•  ê²Œ ìˆë‹¤ëŠ” ì˜ë¯¸ë¼ëŠ”ê±° ì•Œì§€? íƒ€ì… ì‘ì„±í›„ getë³€ìˆ˜ ì‘ì„±í•´
 		return memberName;		
 	}
 	public void setMemberName(String memberName) {
 		this.memberName = memberName;
 	}
 	
-	// ¿À¹ö¶óÀÌµù ÇÒ°Å¾ß
+	// ì˜¤ë²„ë¼ì´ë”© í• ê±°ì•¼
 	@Override
-	public String toString() {  // ¸â¹öº¯¼ö¸¦ ¹İÈ¯ÇÒ °Ô ÀÖÀ¸´Ï±î ¹İÈ¯ Å¸ÀÔ¿¡ ¸ÂÃç¼­ Àû¾îµÎÀÚ. stringÀÌ³×!, °´Ã¼¸íÀ¸·Î ÀÌ ¸Ş¼­µå È£Ãâ °¡´É
+	public String toString() {  // ë©¤ë²„ë³€ìˆ˜ë¥¼ ë°˜í™˜í•  ê²Œ ìˆìœ¼ë‹ˆê¹Œ ë°˜í™˜ íƒ€ì…ì— ë§ì¶°ì„œ ì ì–´ë‘ì. stringì´ë„¤!, ê°ì²´ëª…ìœ¼ë¡œ ì´ ë©”ì„œë“œ í˜¸ì¶œ ê°€ëŠ¥
 		return memberId + ":" + memberName;
-	} //±Ùµ¥ ÀÌ°Ô ÃÖ»óÀ§ Å¬·¡½º¿¡¼­ ¿À¹ö¶óÀÌµùÀ» ÇÑ °ÍÀÎÁö´Â ¸ğ¸£´Ï±î È®½ÇÇÏ°Ô ¾Ë·ÁÁà¾ßÇØ ±×·¡¼­ @Override¶ó°í ÀÛ¼ºÇÏ´Â°Å¾ß!
-	// ÇöÀç´Â ÀÌ°Ô ¾ø¾îµµ µÇÁö¸¸ ¿ì¸®´Â ±â´ÉÀ» ¾Ë¾Æº¸±â À§ÇÑ ÇĞ½À¿ëÀÌ´Ï±î ÀÛ¼ºÇØº¸ÀÚ.
+	} //ê·¼ë° ì´ê²Œ ìµœìƒìœ„ í´ë˜ìŠ¤ì—ì„œ ì˜¤ë²„ë¼ì´ë”©ì„ í•œ ê²ƒì¸ì§€ëŠ” ëª¨ë¥´ë‹ˆê¹Œ í™•ì‹¤í•˜ê²Œ ì•Œë ¤ì¤˜ì•¼í•´ ê·¸ë˜ì„œ @Overrideë¼ê³  ì‘ì„±í•˜ëŠ”ê±°ì•¼!
+	// í˜„ì¬ëŠ” ì´ê²Œ ì—†ì–´ë„ ë˜ì§€ë§Œ ìš°ë¦¬ëŠ” ê¸°ëŠ¥ì„ ì•Œì•„ë³´ê¸° ìœ„í•œ í•™ìŠµìš©ì´ë‹ˆê¹Œ ì‘ì„±í•´ë³´ì.
 
 }

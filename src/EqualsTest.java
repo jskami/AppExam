@@ -1,34 +1,28 @@
-
-public class EqualsTest {  // ±³Àç 357p EqualÀÇ °´Ã¼ º¹»ç¸¦ ¾Ë¾Æº¸ÀÚ!
+public class EqualsTest {  // êµì¬ 357p Equalì˜ ê°ì²´ ë³µì‚¬ë¥¼ ì•Œì•„ë³´ì!
 
 	public static void main(String[] args) {
-		Student st1 = new Student(100, "È«±æµ¿");
-		Student st2 = st1; // °´Ã¼º¹»ç, st1°ú st2 °´Ã¼´Â µ¿ÀÏÇÑ ÁÖ¼Ò¸¦ ³ªÅ¸³¿
+		Student st1 = new Student(100, "í™ê¸¸ë™");
+		Student st2 = st1; // ê°ì²´ë³µì‚¬, st1ê³¼ st2 ê°ì²´ëŠ” ë™ì¼í•œ ì£¼ì†Œë¥¼ ë‚˜íƒ€ëƒ„
 		System.out.println(st1);
 		System.out.println(st2);
-		Student st3 = new Student(100, "È«±æ"); // st3Àº st1°ú ³»¿ëÀÌ µ¿ÀÏÇÑ °´Ã¼
-		System.out.println(st3); //st1°ú st3Àº ´Ù¸¥ °´Ã¼
-		System.out.println("st1°ú st2 ºñ±³ : " + st1.equals(st2));
-		System.out.println("st1°ú st3 ºñ±³ : " + st1.equals(st3));
-		// equals() ¸Ş¼­µåÀÇ ¿øÇüÀº ÇØ½ÃÄÚµå ºñ±³ÀÌ´Ù.
+		Student st3 = new Student(100, "í™ê¸¸"); // st3ì€ st1ê³¼ ë‚´ìš©ì´ ë™ì¼í•œ ê°ì²´
+		System.out.println(st3); //st1ê³¼ st3ì€ ë‹¤ë¥¸ ê°ì²´
+		System.out.println("st1ê³¼ st2 ë¹„êµ : " + st1.equals(st2));
+		System.out.println("st1ê³¼ st3 ë¹„êµ : " + st1.equals(st3));
+		// equals() ë©”ì„œë“œì˜ ì›í˜•ì€ í•´ì‹œì½”ë“œ ë¹„êµì´ë‹¤.
 		
-		// À§ÀÇ ¼³¸í¿¡¼­ ÀÏ¹İ°´Ã¼ÀÏ °æ¿ì ¼³¸í³»¿ë´ë·Î °´Ã¼°¡ ´Ù¸£¸é ÇØ½ÃÄÚµå°¡ ´Ù¸£´Ù.
-		// ´Ü, StringÀÏ °æ¿ì ¿¹¿ÜÀÌ´Ù. StringÀÇ ¹®ÀÚ¿­ÀÌ µ¿ÀÏÇÒ °æ¿ì µ¿ÀÏÇÑ ¸Ş¸ğ¸®¿¡ ÀúÀå
-		// ±â¾ïÀå¼Ò È¿À²Àû »ç¿ë
-		String a1 = new String("È«±æµ¿");
-		String a2 = new String("È«±æµ¿");
-		String a3 = new String("±è»ñ°«");
+		// ìœ„ì˜ ì„¤ëª…ì—ì„œ ì¼ë°˜ê°ì²´ì¼ ê²½ìš° ì„¤ëª…ë‚´ìš©ëŒ€ë¡œ ê°ì²´ê°€ ë‹¤ë¥´ë©´ í•´ì‹œì½”ë“œê°€ ë‹¤ë¥´ë‹¤.
+		// ë‹¨, Stringì¼ ê²½ìš° ì˜ˆì™¸ì´ë‹¤. Stringì˜ ë¬¸ìì—´ì´ ë™ì¼í•  ê²½ìš° ë™ì¼í•œ ë©”ëª¨ë¦¬ì— ì €ì¥
+		// ê¸°ì–µì¥ì†Œ íš¨ìœ¨ì  ì‚¬ìš©
+		String a1 = new String("í™ê¸¸ë™");
+		String a2 = new String("í™ê¸¸ë™");
+		String a3 = new String("ê¹€ì‚¿ê°“");
 		System.out.println(a1.hashCode());
 		System.out.println(a2.hashCode());
 		System.out.println(a3.hashCode());
-		System.out.println(a1 == a2);  // ÀÌ ¹®Àå »ç¿ë ±İÁö!
-		System.out.println(a1.equals(a2));  // ¹®ÀÚ¿­ÀÇ ³»¿ë ºñ±³(ÀÌ ¹æ½ÄÀ» »ç¿ëÇÏ¶ó)
-		
-		
-		
-		
-		
-		
+		System.out.println(a1 == a2);  // ì´ ë¬¸ì¥ ì‚¬ìš© ê¸ˆì§€!
+		System.out.println(a1.equals(a2));  // ë¬¸ìì—´ì˜ ë‚´ìš© ë¹„êµ(ì´ ë°©ì‹ì„ ì‚¬ìš©í•˜ë¼)
+
 	}
 
 

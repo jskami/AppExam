@@ -1,28 +1,28 @@
 import java.util.*;
 public class StudentArrayList {
-	ArrayList<Student> stList; //¼±¾ğ¸¸ ÇÑ »óÅÂ, ÀÌ¸§Àº ÀÚÀ¯¼±ÅÃ 
+	ArrayList<Student> stList; //ì„ ì–¸ë§Œ í•œ ìƒíƒœ, ì´ë¦„ì€ ììœ ì„ íƒ 
 	
-	public StudentArrayList() { // ÀÌ Å¬·¡½ºÀÇ »ı¼ºÀÚ¸¦ ¸¸µç°Å? µùµ¿!
-		stList = new ArrayList<Student>(); //ºñ¾îÀÖ´Â ¸®½ºÆ® »ı¼º, Student°´Ã¼¸¸ÀÌ stList¿¡ µé¾î °¥ ¼ö ÀÖµµ·Ï ÇØ¾ß ÇÑ´Ù.
+	public StudentArrayList() { // ì´ í´ë˜ìŠ¤ì˜ ìƒì„±ìë¥¼ ë§Œë“ ê±°? ë”©ë™!
+		stList = new ArrayList<Student>(); //ë¹„ì–´ìˆëŠ” ë¦¬ìŠ¤íŠ¸ ìƒì„±, Studentê°ì²´ë§Œì´ stListì— ë“¤ì–´ ê°ˆ ìˆ˜ ìˆë„ë¡ í•´ì•¼ í•œë‹¤.
 	}
-	// À§¿¡¼­ ¸¸µç ArrayList¿¡ ÇĞ»ıÀ» Ãß°¡ÇÏ´Â ¸Ş¼­µå..? ÇÎÆş!
+	// ìœ„ì—ì„œ ë§Œë“  ArrayListì— í•™ìƒì„ ì¶”ê°€í•˜ëŠ” ë©”ì„œë“œ..? í•‘í!
 	public void addStudent(Student student) {
 		stList.add(student);
 	}
 	
-	// ÇĞ»ı Id¸¦ »èÁ¦ÇÏ´Â ¸Ş¼­µå, ¿À¹ö·Îµù!
-	public boolean removeStudent(int studentId) { // »èÁ¦ÇÏ´Â °æ¿ì booleanÀ» ¾²´Â°Ô ½À°üÀû?ÀÌ´Ù. ÇÊ¼ö´Â ¾Æ´Ï´Ù!
+	// í•™ìƒ Idë¥¼ ì‚­ì œí•˜ëŠ” ë©”ì„œë“œ, ì˜¤ë²„ë¡œë”©!
+	public boolean removeStudent(int studentId) { // ì‚­ì œí•˜ëŠ” ê²½ìš° booleanì„ ì“°ëŠ”ê²Œ ìŠµê´€ì ?ì´ë‹¤. í•„ìˆ˜ëŠ” ì•„ë‹ˆë‹¤!
 		for (int i = 0; i < stList.size(); i++) {
-			Student tmp = stList.get(i);  // Ä³½ºÆÃÇÒ ÇÊ¿ä°¡ ¾ø´Ù. ÇĞ»ı¸¸ ¸®½ºÆ®¿¡ ÀÖ±â ¶§¹®, ¸¸¾à ´ÙÇü¼ºÀÇ ¼º°İÀ¸·Î ÇĞ»ıÀÌ ¾Æ´Ñ ´Ù¸¥ °´Ã¼µéµµ ÀÖ´Ù¸é ÁöÁ¤ÇØ¼­ Ä³½ºÆÃÀÌ ÇÊ¿äÇÏÁö!
+			Student tmp = stList.get(i);  // ìºìŠ¤íŒ…í•  í•„ìš”ê°€ ì—†ë‹¤. í•™ìƒë§Œ ë¦¬ìŠ¤íŠ¸ì— ìˆê¸° ë•Œë¬¸, ë§Œì•½ ë‹¤í˜•ì„±ì˜ ì„±ê²©ìœ¼ë¡œ í•™ìƒì´ ì•„ë‹Œ ë‹¤ë¥¸ ê°ì²´ë“¤ë„ ìˆë‹¤ë©´ ì§€ì •í•´ì„œ ìºìŠ¤íŒ…ì´ í•„ìš”í•˜ì§€!
 			if (tmp.getStudentId() == studentId) {
-				stList.remove(i);  // °´Ã¼Á¦°Å
-				return true; // »èÁ¦¼º°ø
+				stList.remove(i);  // ê°ì²´ì œê±°
+				return true; // ì‚­ì œì„±ê³µ
 			}
 		}
-		return false; // Ã£¾ÒÀ» °æ¿ì ¿©±â±îÁö ¿Ã ÀÏÀÌ ¾ø¾î
+		return false; // ì°¾ì•˜ì„ ê²½ìš° ì—¬ê¸°ê¹Œì§€ ì˜¬ ì¼ì´ ì—†ì–´
 	}
 	
-	// ÇĞ»ı ÀÌ¸§À» »èÁ¦ÇÏ´Â ¸Ş¼­µå(À§¿Í ´Ù¸¥ ¼±»ı´Ô ¹æ½ÄÀ¸·Î), ¿À¹ö·Îµù!
+	// í•™ìƒ ì´ë¦„ì„ ì‚­ì œí•˜ëŠ” ë©”ì„œë“œ(ìœ„ì™€ ë‹¤ë¥¸ ì„ ìƒë‹˜ ë°©ì‹ìœ¼ë¡œ), ì˜¤ë²„ë¡œë”©!
 	public boolean removeStudent(String studentName) {
 		boolean check = false;
 		for (int i = 0; i < stList.size(); i++) {
@@ -36,15 +36,15 @@ public class StudentArrayList {
 		return check;
 	}
 	
-	//ÀüÃ¼ ÇĞ»ıÀ» Ãâ·ÂÇÏ´Â ¸Ş¼­µå¸¦ ¸¸µéÀÚ - 1¹ø ¹æ½Ä: Çâ»óµÈ for¹® .ver
+	//ì „ì²´ í•™ìƒì„ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œë¥¼ ë§Œë“¤ì - 1ë²ˆ ë°©ì‹: í–¥ìƒëœ forë¬¸ .ver
 	public void showAllStudent() {
-		for (Student tmp : stList) { //Çâ»óµÈ for¹®
+		for (Student tmp : stList) { //í–¥ìƒëœ forë¬¸
 			System.out.println(tmp);
 		}
 		System.out.println();
 	}
 	
-	//ÀüÃ¼ ÇĞ»ıÀ» Ãâ·ÂÇÏ´Â ¸Ş¼­µå¸¦ ¸¸µéÀÚ - 2¹ø ¹æ½Ä: ÀüÅëÀûÀÎ .ver
+	//ì „ì²´ í•™ìƒì„ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œë¥¼ ë§Œë“¤ì - 2ë²ˆ ë°©ì‹: ì „í†µì ì¸ .ver
 //	public void showAllStudent() {
 //		for (int i = 0; i < stList.size(); i++) {
 //			Student tmp = stList.get(i);
@@ -54,4 +54,4 @@ public class StudentArrayList {
 	
 }
 
-// ¿À´Ã ¼ö¾÷ÀÇ ÇÙ½ÉÀº ¾î¶² Á¤º¸¸¦ Á¶È¸ÇÏ´Â ¹æ¹ı¿¡¼­ ¹İº¹¹®°ú ¹è¿­ µîÀ» »ç¿ëÇÑ´Ù´Â Á¡À» ¼÷ÁöÇÒ °Í!
+// ì˜¤ëŠ˜ ìˆ˜ì—…ì˜ í•µì‹¬ì€ ì–´ë–¤ ì •ë³´ë¥¼ ì¡°íšŒí•˜ëŠ” ë°©ë²•ì—ì„œ ë°˜ë³µë¬¸ê³¼ ë°°ì—´ ë“±ì„ ì‚¬ìš©í•œë‹¤ëŠ” ì ì„ ìˆ™ì§€í•  ê²ƒ!

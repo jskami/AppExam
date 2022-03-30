@@ -4,8 +4,8 @@
 https://docs.google.com/document/d/1LZg8zO8L8WNTjRJvoGzSA_RaqfwAJWN9I8JZZg0xtj0/edit
 
 List Interface
-람다식 문법 ラムダ式文法
-예외처리 例外処理
+람다식 문법
+예외처리
 
 JAVA IO & 스트림
 入力ストリームの読み出し
@@ -18,10 +18,7 @@ JAVA IO & 스트림
 // ~~ Reader & ~~ Writer = 文字ストリーム
 
 Q1. 그러면 입출력 스트림이 바이트 스트림이고 바이트 스트림은 1바이트를 지원하면 한글은 어떻게 되는거지?
-깨질까?  
-
-でも、資料を直接読んだり書いたりした方が処理がもっと早かったら
-どうして補助ストリームを使うんだろう？
+깨질까?
 
 
 
